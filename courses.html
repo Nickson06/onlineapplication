@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs and Courses</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            padding-top: 70px; /* Adjust this value according to your navbar height *
+        }
+        
+     
+        /* Navbar styling */
+        .navbar {
+            background-color:  #094fa1; /* Light background for the navbar */
+            border-bottom: 1px solid #dee2e6; /* Add a subtle border */
+            height: 60px; /* Adjust the height to fit your design */
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem; /* Larger font size for brand name */
+        }
+        
+        .navbar-nav .nav-link {
+            font-size: 1rem; /* Font size for navigation links */
+        }
+        
+        .navbar-toggler {
+            border-color: #ddd; /* Light border color for toggler */
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url('path-to-your-toggler-icon'); /* Optional: Custom icon */
+        }
+            /* Style for the courses introduction section */
+    .courses-introduction {
+        padding: 20px;
+        background-color: #eaf1f5; /* Light background color for the section */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        margin: 20px auto; /* Center section horizontally */
+        max-width: 800px; /* Limit the width for better readability */
+        text-align: center; /* Center text within the section */
+    }
+
+  
+    .courses-introduction p {
+        font-size: 1.1rem; /* Font size for the paragraph */
+        margin-bottom: 20px; /* Spacing below the paragraph */
+        line-height: 1.6; /* Increase line height for better readability */
+    }
+
+
+        .container {
+            padding: 50px 15px;
+        }
+
+        .text-center {
+            font-size: 2.5em;
+            color: #1e3e26;
+            margin-bottom: 40px;
+        }
+
+        .table {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table th, .table td {
+            padding: 20px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f0a500;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .department-heading {
+            background-color: #e0f7fa; /* Light cyan */
+            font-weight: bold;
+        }
+
+        .table-responsive {
+            animation: fadeInUp 1s ease-in-out;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: #6ccbdc;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #5ab1b8;
+            transform: scale(1.05);
+        }
+        /* Center the announcement section */
+        /* Center the announcement section */
+        /* Ensure container is centered within its parent */
+        /* Ensure the announcement section is centered and styled */
+        .announcement {
+            padding: 20px;
+            background-color: #ffeb3b; /* Bright background color to catch attention */
+            color: #000; /* Text color */
+            text-align: center; /* Center text within the section */
+            border-radius: 10px; /* Rounded corners for a modern look */
+            margin: 20px auto; /* Center section horizontally with auto margins */
+            border: 2px solid #ff9800; /* Border color matching the background */
+            max-width: 800px; /* Limit the width for better readability */
+        }
+        
+        .announcement h3 {
+            font-size: 2rem; /* Larger font size for the heading */
+            color: #d32f2f; /* Bold color for emphasis */
+            margin-bottom: 15px;
+        }
+        
+        .announcement p {
+            font-size: 1.2rem; /* Slightly larger font size for the announcement text */
+            font-weight: bold; /* Make the text bold */
+            color: #d32f2f; /* Matching color with the heading */
+            line-height: 1.5;
+            margin-bottom: 15px; /* Spacing between paragraphs */
+        }
+        
+
+/* Center and resize the requirements section */
+.requirements {
+    padding: 20px;
+    text-align: center; /* Center text */
+}
+
+.requirements h3 {
+    font-size: 1.5rem; /* Adjust the size of the heading */
+    margin-bottom: 15px;
+}
+
+.requirements p {
+    font-size: 1rem; /* Adjust the size of the paragraph text */
+    line-height: 1.5;
+}
+
+.requirements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirements li {
+    margin-bottom: 10px;
+    font-size: 0.9rem; /* Adjust the size of the list items */
+}
+ 
+/* Style for the download form section */
+
+        .form-section {
+            margin-top: 40px;
+        }
+
+        .form-section h3 {
+            color: #1e3e26;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-section form {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-section .btn-primary {
+            background-color: #6ccbdc;
+            border: none;
+        }
+
+        /* WhatsApp Floating Action Button */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 20px; /* Distance from bottom */
+            right: 20px;  /* Distance from right */
+            background-color: #25D366; /* WhatsApp green */
+            color: #ffffff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-size: 24px;
+            z-index: 1000; /* Ensure it's above other content */
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-fab:hover {
+            background-color: #128C7E; /* Darker green on hover */
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1em; /* Adjust font size for smaller screens */
+            }
+
+            .nav-link {
+                font-size: 0.9em; /* Adjust font size for smaller screens */
+                margin-left: 10px; /* Adjust spacing */
+            }
+
+            .text-center {
+                font-size: 2em; /* Reduce font size */
+                margin-bottom: 30px;
+            }
+
+            .table th, .table td {
+                padding: 10px; /* Reduce padding */
+            }
+
+            .whatsapp-fab {
+                width: 50px; /* Reduce size */
+                height: 50px;
+                font-size: 20px;
+                bottom: 10px; /* Reduce bottom spacing */
+                right: 10px; /* Reduce right spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+       <!-- Navbar -->
+       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Back to Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="courses-table" class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Programs and Courses</h2>
+        <p>At BTTI, we are committed to providing high-quality education and training. Our institute is accredited by the Technical and Vocational Education and Training Authority (TVETA) to offer a diverse range of programs designed to equip students with essential skills and knowledge. Explore our comprehensive selection of courses tailored to meet industry demands and help you advance in your career.</p>
+        <div class="table-responsive" data-aos="fade-up">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Courses</th>
+                        <th>Minimum Entry Requirement</th>
+                        <th>Examination Body</th>
+                        <th>Intakes</th>
+                        <th>Duration/Fee (Ksh)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="department-heading">
+                        <td>1.0</td>
+                        <td>Building and Civil Engineering Department</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>Biosanitation Technology</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>NITA/BTTI</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>1.2</td>
+                        <td>Artisan in Masonry (With specialization in Bio-Sanitation Technology)</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>NITA/BTTI</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>1.3</td>
+                        <td>Artisan in Plumbing (With specialization in Bio-Sanitation Technology)</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>NITA/BTTI</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term</td>
+                    </tr>
+                    <tr class="department-heading">
+                        <td>2.0</td>
+                        <td>Mechanical Engineering Department</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>Artisan/Trade Test Motor Vehicle Mechanics</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>NITA/BTTI</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>2.2</td>
+                        <td>Artisan/Trade Test Welding & Fabrication</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>NITA/BTTI</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>2.3</td>
+                        <td>Artisan/Trade Test Automotive Mechanical Technician</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>NITA/BTTI</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term</td>
+                    </tr>
+                    <tr class="department-heading">
+                        <td>3.0</td>
+                        <td>Hospitality and Institutional Management Department</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.1</td>
+                        <td>Artisan in Food and Beverage</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>BTTI/NITA</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>3.2</td>
+                        <td>Artisan in Fashion Design</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>BTTI/NITA</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term</td>
+                    </tr>
+                    <tr class="department-heading">
+                        <td>4.0</td>
+                        <td>Health Science Department</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4.1</td>
+                        <td>Artisan in Home Care Nursing (HCN)</td>
+                        <td>KCPE & Above (KNEC) or being a CHP</td>
+                        <td>BTTI/NITA</td>
+                        <td>January, May & September</td>
+                        <td>5 terms 15,000 per term (CHPs- 7,000 ,3 Months)</td>
+                    </tr>
+                    <tr>
+                        <td>4.2</td>
+                        <td>Certificate in Community Health</td>
+                        <td>KNEC (D plain) or its equivalent</td>
+                        <td>BTTI/CBET/CDAC</td>
+                        <td>January, May & September</td>
+                        <td>3 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>4.3</td>
+                        <td>Diploma in Community Health</td>
+                        <td>KNEC (C- Minus) or its equivalent</td>
+                        <td>BTTI/CDAC/CBET</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>4.4</td>
+                        <td>Certificate in Counselling Psychology</td>
+                        <td>KNEC (D plain) or its equivalent</td>
+                        <td>BTTI/CDA/CBET</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>4.5</td>
+                        <td>Diploma in Counselling and Psychology</td>
+                        <td>KNEC (C-Minus) or its equivalent</td>
+                        <td>BTTI/CDA/CBET</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000 per term</td>
+                    </tr>
+                    <tr class="department-heading">
+                        <td>5.0</td>
+                        <td>Liberal Studies</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5.1</td>
+                        <td>Certificate in Social Work and Community Development</td>
+                        <td>KNEC (D plain) or its equivalent</td>
+                        <td>BTTI/CBET/CDAC</td>
+                        <td>January, May & September</td>
+                        <td>3 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>5.2</td>
+                        <td>Diploma in Social Work and Community Development</td>
+                        <td>KNEC (C- Minus) or its equivalent</td>
+                        <td>BTTI/CBET/CDAC</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>5.3</td>
+                        <td>Certificate in Business Management</td>
+                        <td>KNEC (D plain) or its equivalent</td>
+                        <td>BTTI/CBET/CDAC</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000 per term</td>
+                    </tr>
+                    <tr>
+                        <td>5.4</td>
+                        <td>Diploma in Business Management</td>
+                        <td>KNEC (C- Minus) or its equivalent</td>
+                        <td>BTTI/CBET/CDAC</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000 per term</td>
+                    </tr>
+                    <tr class="department-heading">
+                        <td>6.0</td>
+                        <td>ICT</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6.1</td>
+                        <td>Certificate in Computer Proficiency (Packages)</td>
+                        <td>KNEC (D plain) or its equivalent</td>
+                        <td>BTTI</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 4,500</td>
+                    </tr>
+                    <tr>
+                        <td>6.2</td>
+                        <td>Diploma in Computer Proficiency</td>
+                        <td>KNEC (C- Minus) or its equivalent</td>
+                        <td>BTTI</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 4,500</td>
+                    </tr>
+                    <tr>
+                        <td>6.3</td>
+                        <td>Certificate in ICT</td>
+                        <td>KNEC (D plain) or its equivalent</td>
+                        <td>BTTI</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000</td>
+                    </tr>
+                    <tr>
+                        <td>6.4</td>
+                        <td>Diploma in ICT</td>
+                        <td>KNEC (C- Minus) or its equivalent</td>
+                        <td>BTTI</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000</td>
+                    </tr>
+                    <tr class="department-heading">
+                        <td>7.0</td>
+                        <td>Cosmetology</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7.1</td>
+                        <td>Certificate in Hair Dressing & Beauty Therapy</td>
+                        <td>KCPE & Above (KNEC) Ability to read & write</td>
+                        <td>NITA</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000</td>
+                    </tr>
+                    <tr>
+                        <td>7.2</td>
+                        <td>Diploma in Hair Dressing & Beauty Therapy</td>
+                        <td>KNEC (C- Minus) or its Certificate in hair dressing & beauty therapy</td>
+                        <td>NITA</td>
+                        <td>January, May & September</td>
+                        <td>6 terms 15,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <!-- Announcement Section -->
+    <section class="announcement container text-center">
+        <h3>🚨 Exciting News! 🚨</h3>
+        <p><strong>September Intake is On!</strong> Don't miss out on our upcoming programs. Apply now and secure your spot.</p>
+        <p>We are also pleased to announce that our Caregiving course, Artisan, Certificate, and Diploma programs are now leading to job placements abroad. Take advantage of these opportunities to advance your career and gain international experience!</p>
+    </section>
+    
+<!-- Entry Requirements Section -->
+<section class="requirements container text-center">
+    <h3>Entry Requirements</h3>
+    <p>To gain admission to BTTI, one must satisfy any of the following minimum requirements:</p>
+    <ul>
+        <li><strong>Professional Courses:</strong> KCSE Qualification (or equivalent examination) with an aggregate of C+.</li>
+        <li><strong>Diploma:</strong> KCSE Qualification (or equivalent examination) with an aggregate C- (Minus) and above.</li>
+        <li><strong>Certificate:</strong> KCSE Qualification (or equivalent examination) with an aggregate D Plain and above.</li>
+        <li><strong>Artisan Course:</strong> Holder of KCSE or KCPE Certificate.</li>
+        <li><strong>Vocational Certificate:</strong> Ideal for fresh high school graduates and established professionals in various areas.</li>
+    </ul>
+</section>
+
+
+
+    <!-- Application Form Section -->
+<section id="apply" class="form-section container">
+    <h3>Apply Online</h3>
+    <form id="applicationForm" action="http://localhost:3000/apply" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="course" class="form-label">Course</label>
+            <select class="form-select" id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="Biosanitation Technology">Biosanitation Technology</option>
+                <option value="Artisan in Masonry">Artisan in Masonry</option>
+                <option value="Artisan in Plumbing">Artisan in Plumbing</option>
+                <option value="Artisan/Trade Test Motor Vehicle Mechanics">Artisan/Trade Test Motor Vehicle Mechanics</option>
+                <option value="Artisan/Trade Test Welding & Fabrication">Artisan/Trade Test Welding & Fabrication</option>
+                <option value="Artisan in Fashion Design">Artisan in Fashion Design</option>
+                <option value="Artisan in Food and Beverage">Artisan in Food and Beverage</option>
+                <option value="Artisan in Home Care Nursing (HCN)">Artisan in Home Care Nursing (HCN)</option>
+                <option value="Certificate in Community Health">Certificate in Community Health</option>
+                <option value="Diploma in Community Health">Diploma in Community Health</option>
+                <option value="Certificate in Counselling Psychology">Certificate in Counselling Psychology</option>
+                <option value="Diploma in Counselling Psychology">Diploma in Counselling Psychology</option>
+                <option value="Certificate in Social Work and Community Development">Certificate in Social Work and Community Development</option>
+                <option value="Diploma in Social Work and Community Development">Diploma in Social Work and Community Development</option>
+                <option value="Certificate in Business Management">Certificate in Business Management</option>
+                <option value="Diploma in Business Management">Diploma in Business Management</option>
+                <option value="Certificate in Computer Proficiency(Packages)">Certificate in Computer Proficiency(Packages)</option>
+                <option value="Certificate in Diploma in Computer Proficiency">Diploma in Computer Proficiency</option>
+                <option value="Certificate in ICT">Certificate in ICT</option>
+                <option value="Diploma in ICT">Diploma in ICT</option>
+                <option value="Certificate in Hair Dressing & Beauty Therapy">Certificate in Hair Dressing & Beauty Therapy</option>
+                <option value="Diploma in Hair Dressing & Beauty Therapy">Diploma in Hair Dressing & Beauty Therapy</option>
+                <option value="Artisan/trade test Automotive Mechanical Technician">Artisan/trade test Automotive Mechanical Technician</option>
+               
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+</section>
+    
+
+    <!-- WhatsApp Floating Action Button -->
+<a href="https://wa.me/+254723803678" class="whatsapp-fab" target="_blank" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
